@@ -5,7 +5,7 @@
 
 .project-grid-container {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
     justify-content: center;
     width: 100%;
     gap: 40px;
@@ -22,7 +22,9 @@
     position: relative;
     width: 100%;
     height: 100%;
-    background-color: var(--accent-bg);
+    /* 
+    background-color: var(--accent-bg); 
+    */
     border-radius: var(--standard-border-radius);
 }
 
@@ -31,15 +33,17 @@
     aspect-ratio: 4 / 3;
     object-fit: cover;
     border-radius: var(--standard-border-radius);
+    /*
     border-bottom-left-radius: 0px;
     border-bottom-right-radius: 0px;
+    */
 }
 
 .project-grid-container a .project-item .information-container .title-container {
     text-align: center;
     word-break: break-word;
     overflow-wrap: break;
-    font-weight: normal;
+    font-weight: bold; 
     font-size: 1.5rem;
     line-height: 1.5rem;
     margin-top: 10px;
@@ -53,8 +57,9 @@
     padding-top: 4px;
     padding-bottom: 4px;
     border-radius: 100px;
-    margin: 0.5rem;
+    margin-left: 0.5rem;
     font-size: 1rem;
+    vertical-align: middle;
 }
 
 .project-grid-container a .project-item .information-container .title-container .wip {

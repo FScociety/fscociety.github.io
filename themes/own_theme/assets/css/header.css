@@ -41,11 +41,11 @@ header nav ul li a.active, a.ancestor{
 }
 
 .menu-top-level {
-  margin: 10px 0px 5px 0px;
+  margin: 10px 0px 5px;
 }
 
 .menu-sub-level {
-  margin: 5px 0px 10px 0px;
+  margin: 5px 0px 10px;
 }
 
 .menu-sub-level a {

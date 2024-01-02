@@ -1,9 +1,9 @@
 :root,
   ::backdrop {
-    --sans-font: -apple-system, BlinkMacSystemFont, "Avenir Next", Avenir,
-    "Nimbus Sans L", Roboto, "Noto Sans", "Segoe UI", Arial, Helvetica,
-    "Helvetica Neue", sans-serif;
-    --mono-font: Consolas, Menlo, Monaco, "Andale Mono", "Ubuntu Mono", monospace;
+    --sans-font: -apple-system, "BlinkMacSystemFont", "Avenir Next", "Avenir",
+    "Nimbus Sans L", "Roboto", "Noto Sans", "Segoe UI", "Arial", "Helvetica",
+    "Helvetica Neue", "sans-serif";
+    --mono-font: "Consolas", "Menlo", "Monaco", "Andale Mono", "Ubuntu Mono", "monospace";
     --standard-border-radius: 10px;
     --serif-font: -times-new-roman;
 
@@ -11,7 +11,7 @@
     --bg: #212121;
     --accent-bg: #2b2b2b;
     --light-bg: #535353;
-    --text: #ffffff;
+    --text: #ffff;
     --text-light: #ababab;
     --border: #898EA4;
     --accent: #ffb300;
@@ -33,13 +33,13 @@ body {
   font-size: 1.15rem;
   line-height: 1.5;
   text-align: center;
-  margin: 0px;
+  margin: 0;
 }
 
 .content-container {
   width: 100%;
   max-width: 1000px;
-  min-width: 0px;
+  min-width: 0;
   display: block;
   margin-left: auto;
   margin-right: auto;
@@ -52,7 +52,7 @@ img {
 /* Format headers */
 h1 {
   font-size: 5rem;
-  margin: 0px;
+  margin: 0;
   font-weight:bold; 
   font-family: var(--sans-font);
 }
