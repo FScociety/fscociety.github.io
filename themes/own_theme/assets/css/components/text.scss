@@ -1,4 +1,10 @@
 html {
+    p {
+        margin: 1.2rem 0;
+        color: $text-dark;
+        font-size: 1.2rem;
+    }
+
     h1 {
         font-size: 8rem;
         margin: 0px;
@@ -8,38 +14,32 @@ html {
     }
         
     h2 {
-    font-size: 3rem;
-    text-align: center;
-    margin-top: 100px;
-    margin-bottom: 25px;
+        font-size: 3rem;
+        text-align: center;
+        margin-top: 100px;
+        margin-bottom: 25px;
     }
     
     h3 {
-    font-size: 2rem;
+        font-size: 2.3rem;
     }
     
     h4 {
-    font-size: 1.44rem;
+        font-size: 1.44rem;
     }
     
     h5 {
-    font-size: 1.15rem;
+        font-size: 1.15rem;
     }
-    
+
     h6 {
-    font-size: 0.96rem;
-    }
-    
-    p {
-    margin: 1.5rem 0;
-    color: $text-darker;
-    font-size: 1.5rem;
+        font-size: 0.96rem;
     }
     
     a {
     color: $text;
     }
-
+/*
     @media screen and (max-width: 1500px) {
         h1 {
           font-size: 5rem;
@@ -75,6 +75,8 @@ html {
         font-size: 3.5rem;
     }
     }
+
+*/
 }
 
 .text.left {
@@ -87,4 +89,20 @@ html {
 
 .text.center {
     text-align: center;
+}
+
+p.notice {
+    background: $bg-light;
+    border: 1px solid $text-darker;
+    border-radius: $standard-border-radius;
+    margin: 2rem 0;
+    padding: 1.5rem;
+}
+
+pre {
+    background: $bg-light;
+    border: 1px solid $text-darker;
+    border-radius: $standard-border-radius;
+    margin: 2rem 0;
+    padding: 1.5rem;
 }

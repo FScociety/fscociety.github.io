@@ -12,8 +12,8 @@ programs_used:
 
 ## Intro
 
-The project was a uni project for Filmakademie Baden-Württemberg in collaboration with Akademie für Darstellende Kunst.
-Me and another VFX student did the effect and I did this shot from beginning to end.
+The project was a uni project for "Filmakademie Baden-Württemberg" in collaboration with "Akademie für Darstellende Kunst".
+I helped out with onset supervison and one shot.
 
 I choose Blender and the flip-fluids addon for all the 3d stuff and nuke for compositing.
 I thought about using houdini but I had no experience and no license, so i went with the safe route.
@@ -23,14 +23,16 @@ I thought about using houdini but I had no experience and no license, so i went 
 ### Structure
 
 1. Set reconstruction based on 3d scans of the room and the characters
+
 2. A fluid simulation using the 3d mesh as a collision
+
 3. Roto of the characters and compositing. 
 
 ### Splitting the project
 
 For the entire 3d process i used blender, which I have a lot of experience.
 Though this project was a new challenge :)
-In the beginning I naivly had everything in one file, but then I added the simulation the file became incresingly slow.
+In the beginning I naivly had everything in one file, but then I added the simulation blender became increasingly slow.
 Therefore the modelling was really painful, so it was clear to me I have to split the project into different files and link them together.
 
 I choose for 3 files:
@@ -47,17 +49,23 @@ Voala everything was up to speed again. This had two other advantages:
 
 - smaller file sizes when versioning. The modelling file was around 1 GB in size, so changing the lighting part made me a new version where the majority of the filesize didn't change.
 
-LEARNING: From this I took away, that its not only usefull for teams to split the project into different files
-but it can also be usefull for one person projects. Though it ads complexity and chances for things breaking which for most projets is not worth it
+{{< notice >}}
+**Learning**  
+From this I took away, that its not only usefull for teams to split the project into different files
+but it can also be usefull for one person projects. Though it ads complexity and chances for things breaking which for most projets is not worth it.
+{{< /notice >}}
 
 ### File versioning
 For versioning I used a small script. It would save a copy with an incremented version number to the same directory ( the work dir ). Then another copy with removed version numbers one directory up acting as the publish file.
 For example:
 
-    └── modelling
-        ├── sh01_mod.blend
-        └── work
-            └── sh01_mod_01.blend
+{{< highlight bash >}}
+└── modelling
+    ├── sh01_mod.blend
+    └── work
+        └── sh01_mod_01.blend
+{{< /highlight >}}
+
 
 Later I could relink the published file which always has the same name, so no relinking in the other files.
 
@@ -77,7 +85,7 @@ After splitting the file into three different parts I had to think of a way on h
 I tried linking the fluid domain object of the flip fluids addon into the rendering file, but flip fluids addon doesn't support this behaviour and showed me nothing.  
 Another idea was to link the simulation cache to a new object, which sadly also didn't work.  
 
-So I ended up exportiong the simulation as an alembic sequence, which sadly doubled my simulation size.
+So I ended up exporting the simulation as an alembic sequence. This sadly doubles the simulation size, because I had to store the alembic file and the internal chache of the flip fluids addon.
 
 ## Hardware
 
